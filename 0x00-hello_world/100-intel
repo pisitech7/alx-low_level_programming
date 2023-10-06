@@ -1,0 +1,22 @@
+i#!/bin/bash
+
+# Check if the $CFILE variable is set
+if [ -z "$CFILE" ]; then
+  echo "Error: The \$CFILE variable is not set."
+  exit 1
+fi
+
+# Extract the filename without the extension
+FILENAME=$(basename -- "$CFILE")
+FILENAME_NOEXT="${FILENAME%.*}"
+
+# Generate the assembly code using GCC with Intel syntax
+gcc -S -masm=intel "$CFILE" -o "${FILENAME_NOEXT}.s"
+
+# Check if the assembly file was generated successfully
+if [ $? -eq 0 ]; then
+  echo "Assembly code generated and saved as ${FILENAME_NOEXT}.s"
+else
+  echo "Error: Failed to generate assembly code."
+fi
+
