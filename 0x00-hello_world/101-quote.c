@@ -4,7 +4,8 @@
  * main - Entry point
  *
  * Return: Always i (error)
- * */
+ *
+ */
 int main(void)
 {
 /* Use the write system call to print to stderr (file descriptor 2) */
