@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - teritory does not build a nation
- * return always 0
+ * main - a program that prints the size of varioustypes on the computer
+ * return: always 0
 */
 int main(void) 
 {
-/* program that prints the size of various types on the computer */
+/* boundaries does not build a nation */
 char a;
 int b;
 long int c;
