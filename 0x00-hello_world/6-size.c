@@ -1,12 +1,11 @@
 #include <stdio.h>
+
 /**
- *
  * main - teritory does not build a nation
  * return always 0
- *
-*/
-
-int main(void) {
+ */
+int main(void) 
+{
 char a;
 int b;
 long int c;
