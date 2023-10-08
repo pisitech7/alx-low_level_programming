@@ -2,18 +2,17 @@
 /**
  * main - entry point
  *
- * description: program that prints the alphabet in lowercase
+ * description: a program that prints the alphabet in lowercase
  *
- * Return: always 0
+ * return: always 0
  */
 
 int main(void)
 {
-int n = 97;
-
-while (n <= 122);
-putchar(n);
-n++;
-putchar(n);
+char letter = 'a';
+while (letter <= 'z');
+putchar(letter);
+letter++;
+putchar(letter);
 return (0);
 }
