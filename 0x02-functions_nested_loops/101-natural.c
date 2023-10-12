@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- * description:A function that prints the n times table, starting with 0
- * return: slaways 0 to indicate successfull completion
+ * main - Entry point
+ *
+ * description: A program  computes and prints the sum of  multiples of 3 or 5 below 1024
+ *
+ * return: Alaways 0 to indicate successfull completion
  */
 
 int main(void)
