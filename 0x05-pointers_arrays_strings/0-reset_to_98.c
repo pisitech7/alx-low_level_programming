@@ -2,7 +2,7 @@
 
 /**
  * main - entry point
- * reset_to_98 - Updates the value pointed to by a pointer to 98.
+ * reset_to_98 - function that takes a paraameter and updates to 98.
  * @n:Apointer to an int to update
  *
  * Description: This function takes a pointer to an integer
