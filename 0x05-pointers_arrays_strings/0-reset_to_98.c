@@ -2,9 +2,9 @@
 
 /**
  * main - entry point
- *A program  that takes a pointer to an int as parameter
+ *reset_to_98 - Updates the value pointed to by a pointer to 98.
  *and updates the value it points to to 98.
- *@n:input
+ *@n:A pointer to an int to update
  *return:n
  */
 
