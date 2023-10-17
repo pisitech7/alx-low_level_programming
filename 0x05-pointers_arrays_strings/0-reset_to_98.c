@@ -11,7 +11,7 @@
  * return:No return value (n).
  */
 
-void reset_to_98(int *n)
+v reset_to_98(int *n)
 {
 	*n = 98;
 }
