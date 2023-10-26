@@ -6,7 +6,7 @@
  * @x: value to be raised.
  * @y: power.
  *
- * return: retrun is the value of e raised to power y.
+ * Return: the value of x raised to the power of y.
  */
 
 int _pow_recursion(int x, int y)
