@@ -1,11 +1,6 @@
-
-#include <stdio.h>
-
-/**
- * man - a function-like macro ABS(x) that computes the value of a number x
- * Return: always 0 to indicate successfull compilation
- *
- */
+#ifndef OBJECT_LIKE_MACRO
+#define OBJECT_LIKE_MACRO
 
 #define ABS(x) ((x < 0) ? (-x) : (x))
 
+#endif
