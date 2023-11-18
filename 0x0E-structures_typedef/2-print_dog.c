@@ -1,20 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "dog.h"
 
-struct dog 
-{
-	char *name;
-	float age;
-	char *breed;
-};
+/**
+ * print_dog - prints a struct dog
+ * @d: struct dog to print
+ */
 
-void print_dog(struct dog *d) 
+void print_dog(struct dog *d)
 {
-	if (d == NULL)
-	{
-		return;
-	}
-	printf("Name: %s\n", (d->name != NULL) ? d->name : "(nil)");
-	printf("Age: %.6f\n", d->age);
-	printf("Breed: %s\n", (d->breed != NULL) ? d->breed : "(nil)");
+    if (d == NULL)
+        return;
+
+    if (d->name == NULL)
+        d->name = "(nil)";
+    if (d->owner == NULL)
+        d->owner = "(nil)";
+    printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, (float)d->age, d->owner);
 }
 
