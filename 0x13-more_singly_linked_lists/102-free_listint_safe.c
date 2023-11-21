@@ -12,12 +12,15 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *current = *h, *temp;
 	size_t count = 0;
 
-	while (current != NULL && current > current->next)
+	while (current != NULL)
 	{
-		temp = current;
-		current = current->next;
-		free(temp);
-		count++;
+	temp = current->next;
+	current->next = NULL;
+	free(current);
+	current = temp;
+	count++;
+	if (current >= temp)
+		break;
 	}
 	*h = NULL;
 	return (count);
