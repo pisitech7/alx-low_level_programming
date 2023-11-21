@@ -1,24 +1,30 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 /**
- * reverse_listint - Reverses a listint_t linked list
- * @head: Pointer to a pointer to the head of the list
+ * print_listint_safe - Prints a listint_t linked list safely
+ * @head: Pointer to the head of the list
  *
- * Return: Pointer to the first node of the reversed list
+ * Return: The number of nodes in the list
  */
- listint_t *reverse_listint(listint_t **head)
+size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *prev = NULL, *next = NULL;
-	while (*head != NULL)
-		{
-		next = (**head)->next;
-		(**head)->next = prev;
-		prev = **head;
-		**head = next;
+	const listint_t *current = head;
+	size_t node_count = 0;
+
+	while (current != NULL)
+	{
+	printf("[%p] %d\n", (void *)current, current->n);
+	node_count++;
+	/* Check if the next address points back to a previously visited node */
+	if (current <= current->next)
+	{
+		printf("-> [%p] %d\n", (void *)current->next, current->next->n);
+		break;
 	}
-	**head = prev;
-	return (**head);
+	/* Move to the next node */
+	current = current->next;
+	}
+	return (node_count);
 }
