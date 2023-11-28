@@ -3,6 +3,15 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
+/**
+ * read_textfile - Reads a text file and prints it to the POSIX stdout.
+ * @filename: The name of the file to read.
+ * @letters: The number of letters to read and print.
+ *
+ * Return: On success, returns the actual number of letters read and printed.
+ *         On failure or if the file can't be opened/read, returns 0.
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_descriptor, bytes_read, bytes_written;
